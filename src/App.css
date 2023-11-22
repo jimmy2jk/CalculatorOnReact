@@ -1,38 +1,105 @@
+* {
+  box-sizing: border-box;
+}
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  background-color: antiquewhite;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, rgb(70, 252, 143)0%, rgba(180, 26, 207,1)100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  background: rgba(34,34,34, 0.289);
+  backdrop-filter: blur(30px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 62vh;
+  width: 400px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
   color: white;
+  width: 100%;
+  height: 130px;
+  border: none;
+  padding-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.last-evaluated {
+  height: 25%;
+  text-align: right;
+  background: transparent;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-line {
+  height: 50%;
+  text-align: right;
+  font-size: 36px;
+  background: transparent;
 }
+
+.result-line {
+  height: 25%;
+  text-align: right;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.buttons {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.buttons > button {
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  background: transparent;  
+  color: white;
+  border: 2px solid rgb(75, 255, 171);
+  box-shadow: rgba(50,50,0.93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.buttons .operators {
+  background-color: rgb(116, 255, 190);
+  color:rgb(199, 126, 212);
+}
+
+.buttons .equal {
+  background-color: rgb(32, 252, 149);
+  color:rgb(199, 126, 212);
+}
+
+.buttons button:hover {
+  background-color: rgb(159, 255, 210);
+}
+
+.buttons .clear {
+  grid-column: 1 / span 2;
+  border-radius: 15px;
+}
+
+
+
+
+
