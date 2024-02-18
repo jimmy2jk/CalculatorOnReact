@@ -12,7 +12,7 @@
   background: radial-gradient(circle, rgb(70, 252, 143)0%, rgba(180, 26, 207,1)100%);
 }
 
-.container {
+.calculator {
   background: rgba(34,34,34, 0.289);
   backdrop-filter: blur(30px);
   display: flex;
@@ -98,8 +98,3 @@
   grid-column: 1 / span 2;
   border-radius: 15px;
 }
-
-
-
-
-
